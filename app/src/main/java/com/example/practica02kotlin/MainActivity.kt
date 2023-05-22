@@ -44,9 +44,13 @@ class MainActivity : AppCompatActivity() {
 
 
         btnCalcular.setOnClickListener(View.OnClickListener {
-            if(txtCmc.text.toString().equals("") && txtKg.text.toString().equals(""))
+            if(txtCmc.text.toString().equals(""))
             {
-                Toast.makeText(this@MainActivity,"Hay campos vacios", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this@MainActivity,"No introdujo los centimetros", Toast.LENGTH_SHORT).show();
+            }
+           else if(txtKg.text.toString().equals(""))
+            {
+                Toast.makeText(this@MainActivity,"No introdujo los Kilos", Toast.LENGTH_SHORT).show();
             }
            else{
 

@@ -21,7 +21,7 @@
             android:id="@+id/lblBienvenido"
             android:textAlignment="center"
             android:textSize="12pt"
-            android:text="Bienvenido: Luis Angel">
+            android:text="Bienvenido: Luis Angel Kotlin">
 
         </TextView>
 
