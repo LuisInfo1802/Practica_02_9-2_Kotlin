@@ -25,6 +25,17 @@ class MainActivity : AppCompatActivity() {
         var kg=0.0;
         var imc=0.0;
 
+        fun calcularIMC()
+        {
+            cm=txtCmc.text.toString().toDouble();
+            kg=txtKg.text.toString().toDouble();
+            cm=cm/100;
+            val formato = DecimalFormat("#.##")
+            imc=kg/(cm*cm);
+            txtImc.setText((formato.format(imc)));
+        }
+
+
         btnLimpiar.setOnClickListener(View.OnClickListener {
             txtKg.setText("");
             txtImc.setText("");
@@ -38,13 +49,8 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this@MainActivity,"Hay campos vacios", Toast.LENGTH_SHORT).show();
             }
            else{
-                cm=txtCmc.text.toString().toDouble();
-                kg=txtKg.text.toString().toDouble();
-                cm=cm/100;
-                val formato = DecimalFormat("#.##")
-                imc=kg/(cm*cm);
-                txtImc.setText((formato.format(imc)));
 
+                calcularIMC()
             }
 
         });
@@ -59,6 +65,7 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
 
 
 }
